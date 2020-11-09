@@ -1,0 +1,9 @@
+F = @(x) exp(-x) + x.^2;
+alpha = (sqrt(5)-1)/2;
+[xgold, Ngold]  = goldensection(F,-1,1,2*alpha^(5))
+
+
+xmin = (xgold(2) - xgold(1))/2;
+F(xmin)
+
+[xdich, Ndich] = dichotomous(F,-1,1,2/(sqrt(2)^6),0.01)

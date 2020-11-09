@@ -1,0 +1,20 @@
+function [X,N]=goldensection(F,a,b,tol)
+% For example F = @(x) 1-x*exp(-x)% [a,b] interval
+% tol = max ratio of final to initial interval lengths
+% X output matrix containing final a and b, b-a
+% N = number of function evaluations
+
+alpha = 
+lk = a + ()
+
+while bk-ak > tol
+    
+    if F(lk) <= F(mk)
+        bk = mk;
+    else
+        ak = lk;
+    end
+    N = N + 1;
+end
+X = [ak bk bk-ak];
+
